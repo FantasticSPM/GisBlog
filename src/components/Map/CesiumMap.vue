@@ -3,8 +3,6 @@
 </template>
 
 <script setup>
-// import * as Cesium from 'cesium'
-// import 'cesium/Build/Cesium/Widgets/widgets.css'
 Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjOTAwM2EyMC01ODQ5LTRlMjQtOGIxOS01Yjg0ZjBiM2MwODQiLCJpZCI6MTkwNzg2LCJpYXQiOjE3NDg1NDA5MzF9.5d4lT88cqYp74aPH34QK_iARbCr4GNfQcYAzWx_itf0'
 onMounted(()=>{
   const viewerOptions = {
