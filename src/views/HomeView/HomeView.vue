@@ -36,6 +36,7 @@ watch(()=>route.name, (val) => {
     position: fixed;
     height: $header-height;
     padding: 0;
+    z-index: 999;
   }
   .Gis-View-container{
     margin-top: $header-height;

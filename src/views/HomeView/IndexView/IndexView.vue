@@ -15,11 +15,11 @@
             class="contact-item" 
             :title="item.name">
               <component :is="item.icon" v-if="item.name !== '微信'"></component>
-              <n-popover trigger="hover" v-else>
+              <n-popover trigger="hover" v-else content-class="popover-arrow-wrapper-class">
                 <template #trigger>
                   <component :is="item.icon"></component>
                 </template>
-                <img width="300" src="@/assets/images/home/weixin.png" alt="" srcset="">
+                <img src="@/assets/images/home/weixin.png" alt="" srcset="">
               </n-popover>
             </a>
           </div>
@@ -112,8 +112,8 @@ const contactList = [
         }
       }
       img {
-        width: 200px;
-        height: 200px;
+        width: min(200px, 30vw);
+        height: min(200px, 30vw);
         border-radius: 50%;
       }
     }
@@ -121,6 +121,39 @@ const contactList = [
       margin-top: 30px;
       display: flex;
       gap: 20px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .home-hero {
+      padding: 20px;
+      .home-hero-line1{
+        .home-hero-left{
+          h1{
+            font-size: 30px;
+          }
+          h4{
+            font-size: 15px;
+            margin-top: 0;
+          }
+          .contact{
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+</style>
+
+<style lang="scss">
+.popover-arrow-wrapper-class{
+  padding: 0;
+  img{
+    width: 300px;
+  }
+  @media screen and (max-width: 700px) {
+    img{
+      width: 150px;
     }
   }
 }

@@ -9,7 +9,13 @@ const routes = window.globalConfig.menuOptions.map(i=>{
   if(i.component === "ExampleView"){
     route.path = 'example/:exampleId?'
   }
-  
+  if(i.component === "ArticleView"){
+    route.children = [{
+      path:'detail',
+      name:'detail',
+      component: () => import('@/views/HomeView/ArticleView/ArticleDetail.vue')
+    }]
+  }
   return route
 })
 

@@ -7,7 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import AutoImport  from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
-import Cesium from 'vite-plugin-cesium'
+
 // https://vite.dev/config/
 export default defineConfig({
   server:{
@@ -18,7 +18,6 @@ export default defineConfig({
     vue(),
     vueJsx(),
     vueDevTools(),
-    Cesium(),
     AutoImport({
       imports:[
         'vue', 

@@ -47,6 +47,7 @@ function handleSelect(val){
   align-items: center;
   padding: 0 20px;
   position:sticky;
+  z-index: 999;
   .logo{
     width: 100px;
     font-size: 24px;
@@ -57,6 +58,7 @@ function handleSelect(val){
     // width: 100%;
     height: 100%;
     display: flex;
+    flex: 1;
     align-items: center;
     .v-overflow{
       justify-content: flex-end;

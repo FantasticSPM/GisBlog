@@ -1,6 +1,6 @@
 <template>
   <div class="module-component">
-    <div class="editor">
+    <div class="editor" v-show="editorShow">
       <div class="editor-header">
         <div>
           <span>代码编辑器</span>
@@ -9,6 +9,7 @@
         <div class="btns">
           <n-button type="info" size="small" @click="previewHtml">运行</n-button>
           <n-button size="small" @click="resetHtml">重置</n-button>
+          <n-button strong secondary type="info" size="small" @click="editorShow = !editorShow">隐藏</n-button>
         </div>
       </div>
 
@@ -21,6 +22,7 @@
     </div>
   
     <div class="preview">
+      <n-button v-if="!editorShow" class="btn" strong type="info" size="small" @click="editorShow = !editorShow">显示</n-button>
       <iframe ref="iframe" :src="`/ExampleHtml/${props.moduleId}.html`" frameborder="0" width="100%" height="100%"></iframe>
     </div>
   </div>
@@ -40,6 +42,7 @@ const props = defineProps({
     default: ''
   }
 })
+const editorShow = ref(true)
 const options = {
   wrap:true,
   enableBasicAutocompletion: true,
@@ -102,12 +105,13 @@ async function resetHtml(){
 .module-component{
   display: flex;
   width: 100%;
+  height: calc(100vh - $header-height - $footer-height);
   .editor{
     width: 400px;
     border-right: 1px solid #ccc;
-    height: calc(100vh - $header-height - $footer-height - 10px);
+    
     .ace-editor{
-      height: calc(100% - 34px);
+      height: calc(100% - 38px);
     }
     .editor-header{
       display: flex;
@@ -127,6 +131,16 @@ async function resetHtml(){
     width: 100%;
     height: 100%;
     padding: 0;
+    position: relative;
+    iframe{
+      display: inline-block;
+      vertical-align: bottom;
+    }
+    .btn{
+      position: absolute;
+      top: 5px;
+      left: 5px;
+    }
   }
 }
 
