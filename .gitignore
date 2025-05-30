@@ -9,9 +9,15 @@ lerna-debug.log*
 
 node_modules
 .DS_Store
-dist
 dist-ssr
 coverage
+pubilc
+src
+index.html
+package-lock.json
+package.json
+vite.config.js
+jsconfig.js
 *.local
 
 /cypress/videos/
