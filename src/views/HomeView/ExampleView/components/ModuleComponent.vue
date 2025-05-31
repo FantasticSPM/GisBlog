@@ -78,7 +78,8 @@ loadHtml()
 //加载文本
 const iframe = ref(null)
 async function loadHtml(){
-  let res = await fetch(`/ExampleHtml/${props.moduleId}.html`).then(res=>res.text())
+  const moduleId = props.moduleId
+  let res = await fetch(`/ExampleHtml/${moduleId}.html`).then(res=>res.text())
   content.value = res
 }
 

@@ -12,11 +12,12 @@ window.themeOverrides = {
     infoColorSuppl: '#4098fc'
   },
   Menu:{
-    // color:'#222938',//背景颜色
+    color:'#11192e',//背景颜色
     itemTextColor: '#fff', //文字颜色
     itemTextColorHoverHorizontal: "#2d8cf0",//鼠标悬停文字颜色
     itemColorActiveHover: "#2d8cf0",//鼠标悬停背景颜色
     itemTextColorActiveHorizontal: "#2d8cf0",//激活文字颜色
+    arrowColor: "#fff",//箭头颜色
     itemIconColor: "#fff",//图标颜色
     itemIconColorHoverHorizontal:"#2d8cf0",//鼠标悬停图标颜色
     itemIconColorActiveHorizontal: "#2d8cf0",
