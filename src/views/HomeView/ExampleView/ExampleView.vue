@@ -1,28 +1,30 @@
 <template>
   <div class="example-view">
-    <CatalogMenu v-if="!moduleId"></CatalogMenu>
-    <div class="example-view__content" v-if="!moduleId">
-      <div
-        v-for="module in modules"
-        :key="module.id"
-        class="example-view__module"
-      >  
-        <h2 class="example-view__module__name" :id="module.id">{{ module.name }}</h2>
-        <n-grid class="example-view__module__children" cols="0 400:1 400:3 800:5" :x-gap="25" :y-gap="25">
-          <n-grid-item
-            :id="child.id"
-            v-for="child in module.children"
-            :key="child.id"
-            class="example-view__module__children__item"
-            @click.stop="goModule(child.id)"
-          >
-            <img :src="child.img" alt="" srcset="">
-            <h3>{{ child.name }}</h3>
-          </n-grid-item>
-        </n-grid>
+    <n-layout has-sider>
+      <CatalogMenu v-if="!moduleId"></CatalogMenu>
+      <div class="example-view__content" v-if="!moduleId">
+        <div
+          v-for="module in modules"
+          :key="module.id"
+          class="example-view__module"
+        >  
+          <h2 class="example-view__module__name" :id="module.id">{{ module.name }}</h2>
+          <n-grid class="example-view__module__children" cols="0 400:1 400:3 800:5" :x-gap="25" :y-gap="25">
+            <n-grid-item
+              :id="child.id"
+              v-for="child in module.children"
+              :key="child.id"
+              class="example-view__module__children__item"
+              @click.stop="goModule(child.id)"
+            >
+              <img :src="child.img" alt="" srcset="">
+              <h3>{{ child.name }}</h3>
+            </n-grid-item>
+          </n-grid>
+        </div>
       </div>
-    </div>
-    <ModuleComponent v-else :moduleId="moduleId"></ModuleComponent>
+      <ModuleComponent v-else :moduleId="moduleId"></ModuleComponent>
+    </n-layout>  
   </div>
 </template>
 

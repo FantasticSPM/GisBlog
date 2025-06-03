@@ -19,6 +19,7 @@ window.themeOverrides = {
     itemTextColorActiveHorizontal: "#2d8cf0",//激活文字颜色
     arrowColor: "#fff",//箭头颜色
     itemIconColor: "#fff",//图标颜色
+    itemIconColorCollapsed: "#fff",//收起图标颜色
     itemIconColorHoverHorizontal:"#2d8cf0",//鼠标悬停图标颜色
     itemIconColorActiveHorizontal: "#2d8cf0",
     itemTextColorActive: "#2d8cf0",

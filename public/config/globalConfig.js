@@ -29,35 +29,42 @@ window.globalConfig = {
     {
       id:'jc',
       name:'基础',
+      iconName:'ChatLineSquare',
       children:[
         {
           id: "jc-example1",
           name: "Example 1",
+          iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jc-example2",
           name: "Example 2",
+          iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jc-example3",
           name: "Example 3",
+          iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jc-example4",
           name: "Example 4",
+          iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jc-example5",
           name: "Example 5",
+          iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jc-example6",
           name: "Example 6",
+          iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         }
       ]
@@ -65,35 +72,42 @@ window.globalConfig = {
     {
       id:'jj',
       name:'进阶',
+      iconName:'TrophyBase',
       children:[
         {
           id: "jj-example1",
           name: "Example 1",
+          iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jj-example2",
           name: "Example 2",
+          iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jj-example3",
           name: "Example 3",
+          iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jj-example4",
           name: "Example 4",
+          iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jj-example5",
           name: "Example 5",
+          iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jj-example6",
           name: "Example 6",
+          iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         }
       ]
