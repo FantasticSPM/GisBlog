@@ -1,7 +1,7 @@
 <template>
   <div class="pw-header">
     <div class="logo">
-      GIS LIU
+      <img src="@/assets/logo.png" alt="">
     </div>
     <n-menu
       class="pw-header-menu"
@@ -49,10 +49,15 @@ function handleSelect(val){
   position:sticky;
   z-index: 999;
   .logo{
-    width: 100px;
+    width: 130px;
     font-size: 24px;
     font-weight: bold;
     color: #fff;
+    display: flex;
+    align-items: center;
+    img{
+      width: 100%;
+    }
   }
   :deep().pw-header-menu{
     // width: 100%;

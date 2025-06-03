@@ -4,7 +4,6 @@
     v-if="!Object.keys($route.query).length"
   >
     <div
-      @click="goArticleDetail(firstArticle)"
       class="article-view__top"
       :class="{ 'article-view__item_no-img': !firstArticle.img }"
     >
@@ -18,6 +17,7 @@
           class="article-view__top__btn"
           type="primary"
           size="large"
+          @click="goArticleDetail(firstArticle)"
         >查看详情</n-button>
       </div>
     </div>
