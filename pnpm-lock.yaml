@@ -26,6 +26,9 @@ dependencies:
   naive-ui:
     specifier: ^2.41.0
     version: 2.41.0(vue@3.5.13)
+  nprogress:
+    specifier: ^0.2.0
+    version: 0.2.0
   pinia:
     specifier: ^3.0.1
     version: 3.0.1(vue@3.5.13)
@@ -2117,6 +2120,10 @@ packages:
       path-key: 4.0.0
       unicorn-magic: 0.3.0
     dev: true
+
+  /nprogress@0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
+    dev: false
 
   /open@10.1.0:
     resolution: {integrity: sha512-mnkeQ1qP5Ue2wd+aivTD3NHd/lZ96Lu0jgf0pwktLPtx6cTZiH7tyeGRRHs0zX0rbrahXPnXlUnbeXyaBBuIaw==}

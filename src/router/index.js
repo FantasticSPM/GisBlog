@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 const routes = window.globalConfig.menuOptions.map(i=>{
   let route = {
@@ -8,8 +10,7 @@ const routes = window.globalConfig.menuOptions.map(i=>{
   }
   if(i.component === "ExampleView"){
     route.path = 'example/:exampleId?'
-  }
-  if(i.component === "ArticleView"){
+  }else if(i.component === "ArticleView"){
     route.children = [{
       path:'detail',
       name:'detail',
@@ -29,4 +30,13 @@ const router = createRouter({
   }]
 })
 
+router.beforeEach((to, from) => {
+  NProgress.start();
+  return
+})
+
+router.afterEach((to, from) => {
+  NProgress.done();
+  return
+})
 export default router
