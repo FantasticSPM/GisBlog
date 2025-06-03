@@ -276,6 +276,7 @@ function getArticleDetail(query){
   loading = ElLoading.service({
     lock: true,
     text: '正在加载中......',
+    background: 'rgba(255, 255, 255, 0.6)'
   })
   isLoading.value = true
   if(query.url){
