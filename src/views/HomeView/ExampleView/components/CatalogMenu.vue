@@ -3,15 +3,17 @@
     bordered
     collapse-mode="width"
     :collapsed-width="64"
-    :width="200"
+    :width="225"
     :collapsed="collapsed"
     show-trigger
     @collapse="collapsed = true"
     @expand="collapsed = false"
   >
     <n-menu
-    v-model:value="activeKey"
+    :default-value="defaultValue"
+    :collapsed="collapsed"
     :collapsed-width="64"
+    :collapsed-icon-size="22"
     :options="modules"
     key-field="id"
     label-field="name"
@@ -24,7 +26,8 @@
 <script setup>
 import { useWindowSize } from '@vueuse/core'
 import { ElIcon } from 'element-plus'
-const activeKey = ref(null)
+const activeKey = ref('')
+const defaultValue = ref(window.location.hash.slice(1))
 const modules = window.globalConfig.exampleOptions
 const { width, height } = useWindowSize()
 const collapsed = ref(false)

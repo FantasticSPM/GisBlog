@@ -33,37 +33,37 @@ window.globalConfig = {
       children:[
         {
           id: "jc-example1",
-          name: "Example 1",
+          name: "jc-Example 1",
           iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jc-example2",
-          name: "Example 2",
+          name: "jc-Example 2",
           iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jc-example3",
-          name: "Example 3",
+          name: "jc-Example 3",
           iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jc-example4",
-          name: "Example 4",
+          name: "jc-Example 4",
           iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jc-example5",
-          name: "Example 5",
+          name: "jc-Example 5",
           iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jc-example6",
-          name: "Example 6",
+          name: "jc-Example 6",
           iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         }
@@ -76,37 +76,37 @@ window.globalConfig = {
       children:[
         {
           id: "jj-example1",
-          name: "Example 1",
+          name: "jj-Example 1",
           iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jj-example2",
-          name: "Example 2",
+          name: "jj-Example 2",
           iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jj-example3",
-          name: "Example 3",
+          name: "jj-Example 3",
           iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jj-example4",
-          name: "Example 4",
+          name: "jj-Example 4",
           iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jj-example5",
-          name: "Example 5",
+          name: "jj-Example 5",
           iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         },
         {
           id: "jj-example6",
-          name: "Example 6",
+          name: "jj-Example 6",
           iconName:'Document',
           img:'/ExampleHtml/images/ImageryAdjustment.jpg',
         }
