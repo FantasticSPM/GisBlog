@@ -1,8 +1,8 @@
 <template>
   <div class="example-view">
     <n-layout has-sider>
-      <CatalogMenu v-if="!moduleId"></CatalogMenu>
-      <div class="example-view__content" v-if="!moduleId">
+      <CatalogMenu v-if="!$route.query.exampleId"></CatalogMenu>
+      <div class="example-view__content" v-if="!$route.query.exampleId">
         <div
           v-for="module in modules"
           :key="module.id"
@@ -23,7 +23,7 @@
           </n-grid>
         </div>
       </div>
-      <ModuleComponent v-else :moduleId="moduleId"></ModuleComponent>
+      <ModuleComponent v-else></ModuleComponent>
     </n-layout>  
   </div>
 </template>
@@ -31,20 +31,11 @@
 <script setup>
 import CatalogMenu from './components/CatalogMenu.vue';
 import ModuleComponent from './components/ModuleComponent.vue';
-const route = useRoute();
+
 const router = useRouter();
 const modules = window.globalConfig.exampleOptions
-
-const moduleId = ref('')
-
-watch(() => route.params.exampleId, (newVal) => {
-  moduleId.value = newVal
-},{
-  immediate: true
-})
-
 function goModule(id) {
-  router.push({ name: 'ExampleView', params: { exampleId: id } })
+  router.push({ name: 'ExampleView', query: { exampleId: id } })
 }
 </script>
 

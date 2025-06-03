@@ -23,25 +23,23 @@
   
     <div class="preview">
       <n-button v-if="!editorShow" class="btn" strong type="info" size="small" @click="editorShow = !editorShow">显示</n-button>
-      <iframe ref="iframe" :src="`/ExampleHtml/${props.moduleId}.html`" frameborder="0" width="100%" height="100%"></iframe>
+      <iframe ref="iframe" frameborder="0" width="100%" height="100%"></iframe>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ElLoading } from 'element-plus'
 import { VAceEditor } from 'vue3-ace-editor';
 import { addCompleter } from 'ace-builds/src-noconflict/ext-language_tools';
 import 'ace-builds/src-noconflict/mode-html'
 import 'ace-builds/src-noconflict/mode-javascript'
 import 'ace-builds/src-noconflict/mode-json'; // 加载语言定义文件
 import 'ace-builds/src-noconflict/theme-chrome'; // 加载主题定义文件
+const route = useRoute();
+const router = useRouter();
 const content = ref('')
-const props = defineProps({
-  moduleId:{
-    type: [String,Number],
-    default: ''
-  }
-})
+
 const editorShow = ref(true)
 const options = {
   wrap:true,
@@ -74,32 +72,64 @@ addCompleter({
     ]);
   }
 })
-loadHtml()
-//加载文本
-const iframe = ref(null)
-async function loadHtml(){
-  const moduleId = props.moduleId
-  let res = await fetch(`/ExampleHtml/${moduleId}.html`).then(res=>res.text())
-  content.value = res
-}
 
+//加载文本
+let loading
+const iframe = ref(null)
+loadHtml()
+async function loadHtml(){
+  loading = ElLoading.service({
+    lock: true,
+    text: '正在加载中......',
+    background: 'rgba(255, 255, 255, 0.6)'
+  })
+  const moduleId = route.query.exampleId
+  const path = `/ExampleHtml/${moduleId}.html`
+  let res = await fetch(path).then(res=>res.text())
+  iframe.value.src= path 
+  iframe.value.onload = function() {
+    const document = iframe.value.contentWindow.document
+    content.value = res
+    const err = document.querySelector('#app')
+    if(err){
+      alert('文件不存在')
+      router.go(-1)
+    }
+    loading&&loading.close()
+    loading = null
+    iframe.value.onload = null
+  }
+}
 
 //预览
 function previewHtml(){
-  
+  loading = ElLoading.service({
+    lock: true,
+    text: '正在加载中......',
+    background: 'rgba(255, 255, 255, 0.6)'
+  })
   iframe.value.src = 'about:blank'
-  iframe.value.onload = function() {
+  setTimeout(()=>{
     iframe.value.contentWindow.document.open();
     iframe.value.contentWindow.document.write(content.value);
     iframe.value.contentWindow.document.close();
-  }
+    iframe.value.onload = function() {
+      loading&&loading.close()
+      loading = null
+      iframe.value.onload = null
+    }
+  },100)
 }
 
 //重置
 async function resetHtml(){
   await loadHtml()
-  previewHtml()
+  // previewHtml()
 }
+
+onBeforeUnmount(()=>{
+  loading && loading.close()
+})
 </script>
 
 <style lang="scss" scoped>

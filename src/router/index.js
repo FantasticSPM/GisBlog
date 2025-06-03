@@ -8,9 +8,7 @@ const routes = window.globalConfig.menuOptions.map(i=>{
     name: i.component,
     component: () => import(`@/views/HomeView/${i.component}/${i.component}.vue`)
   }
-  if(i.component === "ExampleView"){
-    route.path = 'example/:exampleId?'
-  }else if(i.component === "ArticleView"){
+  if(i.component === "ArticleView"){
     route.children = [{
       path:'detail',
       name:'detail',
@@ -27,7 +25,14 @@ const router = createRouter({
     name: 'home',
     component: () => import('@/views/HomeView/HomeView.vue'),
     children: routes
-  }]
+  }
+  ,{
+    path: '/:pathMatch(.*)*', // 匹配所有未定义的路由
+    name: 'notFound',
+    component: () => import('@/views/404View/404View.vue'),
+    hidden: true
+  }
+]
 })
 
 router.beforeEach((to, from) => {
