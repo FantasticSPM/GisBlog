@@ -170,8 +170,8 @@ onBeforeUnmount(()=>{
     }
     .btn{
       position: absolute;
-      top: 5px;
-      left: 5px;
+      bottom: 30px;
+      right: 5px;
     }
   }
 }
