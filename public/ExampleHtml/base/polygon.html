@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="../../Cesium/Widgets/widgets.css" />
+    <script src="../../ExampleHtml/js/init.js"></script>
+    <title>面</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      #map {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <script>
+      const viewer = initViewer("map");
+      viewer.camera.setView({
+        destination: Cesium.Cartesian3.fromDegrees(
+          116.69678717164757,
+          38.86547237471387,
+          200000
+        ),
+        orientation: {
+          heading: Cesium.Math.toRadians(0),
+          pitch: Cesium.Math.toRadians(-90),
+          roll: 0.0,
+        },
+      });
+
+      //面1
+      const polygon1Path = [
+        [116.29800361947787, 39.106816618799996],
+        [116.69384583654168, 38.99157164080442],
+        [116.57961378579623, 38.47191826070668],
+      ];
+      const polygon1 = viewer.entities.add({
+        name: "polygon",
+        polygon: {
+          hierarchy: new Cesium.PolygonHierarchy(
+            Cesium.Cartesian3.fromDegreesArray(polygon1Path.flat())
+          ),
+          material: Cesium.Color.RED.withAlpha(0.5),
+        },
+      });
+
+      //面2
+      const polygonPath2 = [
+        [116.75914463544149, 39.00700232980366, 100],
+        [117.13093260391244, 39.00034277993544, 2000],
+        [117.09879942969093, 38.736059974089464, 1000],
+        [116.91234162274073, 38.74254181329909, 1000],
+        [116.74621262910577, 38.78418598617295, 500],
+        [116.77658490668927, 38.87090409421, 5000],
+      ];
+
+      const polygon2 = viewer.entities.add({
+        name: "polygon",
+        polygon: {
+          hierarchy: new Cesium.PolygonHierarchy(
+            Cesium.Cartesian3.fromDegreesArrayHeights(polygonPath2.flat())
+          ),
+          material: Cesium.Color.BLUE.withAlpha(0.5),
+          perPositionHeight: true, //是否使用每个顶点的高度
+        },
+      });
+    </script>
+  </body>
+</html>

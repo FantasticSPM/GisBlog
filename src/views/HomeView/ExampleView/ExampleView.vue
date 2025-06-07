@@ -15,7 +15,7 @@
               v-for="child in module.children"
               :key="child.id"
               class="example-view__module__children__item"
-              @click.stop="goModule(child.id)"
+              @click.stop="goModule(module,child.id)"
             >
               <img :src="child.img" alt="" srcset="">
               <h3>{{ child.name }}</h3>
@@ -34,8 +34,8 @@ import ModuleComponent from './components/ModuleComponent.vue';
 
 const router = useRouter();
 const modules = window.globalConfig.exampleOptions
-function goModule(id) {
-  router.push({ name: 'ExampleView', query: { exampleId: id } })
+function goModule(module,id) {
+  router.push({ name: 'ExampleView', query: { moduleId:module.id,exampleId: id } })
 }
 </script>
 
@@ -65,7 +65,7 @@ function goModule(id) {
         background-color: #fff;
         img{
           width: 100%;
-          aspect-ratio: 1/0.8;
+          aspect-ratio: 4/3;
           object-fit: fill;
           display: block;
         }

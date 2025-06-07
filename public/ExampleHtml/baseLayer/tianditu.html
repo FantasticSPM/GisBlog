@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="../../Cesium/Widgets/widgets.css" />
+    <script src="../../ExampleHtml/js/init.js"></script>
+    <title>天地图</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        position: relative;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      #map {
+        width: 100%;
+        height: 100%;
+      }
+
+      #baseLayer_select {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <select id="baseLayer_select">
+      <option value="vec">矢量底图</option>
+      <option value="vec,cva">矢量底图 + 注记</option>
+      <option value="img">影像底图</option>
+      <option value="img,cia">影像底图 + 注记</option>
+      <option value="ter">地形底图</option>
+      <option value="ter,cta">地形底图 + 注记</option>
+    </select>
+    <script>
+      const viewer = initViewer("map");
+      viewer.camera.setView({
+        destination: Cesium.Cartesian3.fromDegrees(116.39, 39.9, 1000000),
+        orientation: {
+          heading: Cesium.Math.toRadians(0),
+          pitch: Cesium.Math.toRadians(-90),
+          roll: 0.0,
+        },
+      });
+
+      viewer.imageryLayers.removeAll();
+
+      // 天地图Key
+      const webKey = "a76b9ea6e49fb0eecdb1ed34d1e75930";
+
+      addBaseLayer("vec");
+
+      function addBaseLayer(type) {
+        viewer.imageryLayers.addImageryProvider(
+          new Cesium.WebMapTileServiceImageryProvider({
+            url: `http://t{s}.tianditu.com/${type}_w/wmts?tk=${webKey}`,
+            service: "wmts",
+            request: "GetTile",
+            version: "1.0.0",
+            layer: type,
+            style: "default",
+            format: "tiles",
+            tileMatrixSetID: "w",
+            subdomains: [0, 1, 2, 3, 4, 5, 6, 7],
+          })
+        );
+      }
+
+      const select = document.getElementById("baseLayer_select");
+      select.addEventListener("change", function () {
+        viewer.imageryLayers.removeAll();
+        const values = this.value.split(",");
+        values.forEach((value) => {
+          addBaseLayer(value);
+        });
+      });
+    </script>
+  </body>
+</html>

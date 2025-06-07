@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="../../Cesium/Widgets/widgets.css" />
+    <script src="../../ExampleHtml/js/init.js"></script>
+    <title>点线面</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      #map {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <script>
+      const viewer = initViewer("map");
+      viewer.camera.setView({
+        destination: Cesium.Cartesian3.fromDegrees(
+          116.98507424682586,
+          38.604875452522386,
+          70000
+        ),
+        orientation: {
+          heading: Cesium.Math.toRadians(0),
+          pitch: Cesium.Math.toRadians(-90),
+          roll: 0.0,
+        },
+      });
+
+      //线面组合,加强效果
+      const polygonAndPolilinePath = [
+        [116.75273009782538, 38.673806404322],
+        [116.67400262431364, 38.554984836006206],
+        [116.79801554742272, 38.53354072501235],
+        [116.90695451689318, 38.55239351494226],
+        [117.11297620597522, 38.582652780066205],
+        [117.32546662714168, 38.61246719694252],
+        [117.22269017580838, 38.68200881027737],
+        [116.94949479551778, 38.630757074909255],
+      ];
+      const polygonAndPoliline = viewer.entities.add({
+        polygon: {
+          hierarchy: new Cesium.PolygonHierarchy(
+            Cesium.Cartesian3.fromDegreesArray(polygonAndPolilinePath.flat())
+          ),
+          material: Cesium.Color.BLUE.withAlpha(0.5),
+        },
+        polyline: {
+          positions: Cesium.Cartesian3.fromDegreesArray(
+            [...polygonAndPolilinePath, polygonAndPolilinePath[0]].flat()
+          ),
+          width: 2,
+          outlineColor: Cesium.Color.WHITE,
+        },
+      });
+
+      //绘制点
+      polygonAndPolilinePath.forEach((item) => {
+        viewer.entities.add({
+          position: Cesium.Cartesian3.fromDegrees(...item),
+          point: {
+            pixelSize: 10,
+            color: Cesium.Color.RED,
+          },
+        });
+      });
+
+      const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+      const a = [];
+      handler.setInputAction((movement) => {
+        const cartesian = viewer.scene.pickPosition(movement.position);
+        const cartographic = Cesium.Cartographic.fromCartesian(cartesian);
+        const longitude = Cesium.Math.toDegrees(cartographic.longitude);
+        const latitude = Cesium.Math.toDegrees(cartographic.latitude);
+        a.push([longitude, latitude]);
+        const height = cartographic.height;
+        console.log(a);
+      }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+    </script>
+  </body>
+</html>

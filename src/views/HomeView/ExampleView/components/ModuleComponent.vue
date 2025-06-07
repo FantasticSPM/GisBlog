@@ -83,8 +83,9 @@ async function loadHtml(){
     text: '正在加载中......',
     background: 'rgba(255, 255, 255, 0.6)'
   })
-  const moduleId = route.query.exampleId
-  const path = `/ExampleHtml/${moduleId}.html`
+  const exampleId = route.query.exampleId
+  const moduleId = route.query.moduleId
+  const path = `/ExampleHtml/${moduleId}/${exampleId}.html`
   let res = await fetch(path).then(res=>res.text())
   iframe.value.src= path 
   iframe.value.onload = function() {

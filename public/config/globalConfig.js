@@ -1,116 +1,109 @@
 window.globalConfig = {
-  menuOptions : [{
-    label: "首页",
-    path: "/",
-    iconName: "House",
-    component: 'IndexView',
-    children:[]
-  },{
-    label: "二三维GIS",
-    path: "gis",
-    iconName: "Position",
-    component:'GISView',
-    children:[]
-  },{
-    label:'示例',
-    path: "example",
-    iconName: "Document",
-    component:'ExampleView',
-    children:[]
-  },{
-    label:'文章',
-    path: "article",
-    iconName: "Document",
-    component:'ArticleView',
-    children:[]
-  }],
-
-  exampleOptions : [
+  menuOptions: [
     {
-      id:'jc',
-      name:'基础',
-      iconName:'ChatLineSquare',
-      children:[
-        {
-          id: "jc-example1",
-          name: "jc-Example 1",
-          iconName:'Document',
-          img:'/ExampleHtml/images/ImageryAdjustment.jpg',
-        },
-        {
-          id: "jc-example2",
-          name: "jc-Example 2",
-          iconName:'Document',
-          img:'/ExampleHtml/images/ImageryAdjustment.jpg',
-        },
-        {
-          id: "jc-example3",
-          name: "jc-Example 3",
-          iconName:'Document',
-          img:'/ExampleHtml/images/ImageryAdjustment.jpg',
-        },
-        {
-          id: "jc-example4",
-          name: "jc-Example 4",
-          iconName:'Document',
-          img:'/ExampleHtml/images/ImageryAdjustment.jpg',
-        },
-        {
-          id: "jc-example5",
-          name: "jc-Example 5",
-          iconName:'Document',
-          img:'/ExampleHtml/images/ImageryAdjustment.jpg',
-        },
-        {
-          id: "jc-example6",
-          name: "jc-Example 6",
-          iconName:'Document',
-          img:'/ExampleHtml/images/ImageryAdjustment.jpg',
-        }
-      ]
+      label: "首页",
+      path: "/",
+      iconName: "House",
+      component: "IndexView",
+      children: [],
     },
     {
-      id:'jj',
-      name:'进阶',
-      iconName:'TrophyBase',
-      children:[
+      label: "二三维GIS",
+      path: "gis",
+      iconName: "Position",
+      component: "GISView",
+      children: [],
+    },
+    {
+      label: "示例",
+      path: "example",
+      iconName: "Document",
+      component: "ExampleView",
+      children: [],
+    },
+    {
+      label: "文章",
+      path: "article",
+      iconName: "Document",
+      component: "ArticleView",
+      children: [],
+    },
+  ],
+
+  exampleOptions: [
+    {
+      id: "baseLayer",
+      name: "底图",
+      iconName: "Document",
+      children: [
         {
-          id: "jj-example1",
-          name: "jj-Example 1",
-          iconName:'Document',
-          img:'/ExampleHtml/images/ImageryAdjustment.jpg',
+          id: "tianditu",
+          name: "天地图",
+          iconName: "Document",
+          img: "/ExampleHtml/images/baseLayer/tianditu.png",
         },
         {
-          id: "jj-example2",
-          name: "jj-Example 2",
-          iconName:'Document',
-          img:'/ExampleHtml/images/ImageryAdjustment.jpg',
+          id: "MapBox",
+          name: "MapBox",
+          iconName: "Document",
+          img: "/ExampleHtml/images/baseLayer/MapBox.png",
         },
         {
-          id: "jj-example3",
-          name: "jj-Example 3",
-          iconName:'Document',
-          img:'/ExampleHtml/images/ImageryAdjustment.jpg',
+          id: "gaode",
+          name: "高德",
+          iconName: "Document",
+          img: "/ExampleHtml/images/baseLayer/gaode.png",
         },
         {
-          id: "jj-example4",
-          name: "jj-Example 4",
-          iconName:'Document',
-          img:'/ExampleHtml/images/ImageryAdjustment.jpg',
+          id: "BingMap",
+          name: "BingMap",
+          iconName: "Document",
+          img: "/ExampleHtml/images/baseLayer/BingMap.png",
         },
         {
-          id: "jj-example5",
-          name: "jj-Example 5",
-          iconName:'Document',
-          img:'/ExampleHtml/images/ImageryAdjustment.jpg',
+          id: "OpenStreetMap",
+          name: "OpenStreetMap",
+          iconName: "Document",
+          img: "/ExampleHtml/images/baseLayer/OpenStreetMap.png",
         },
         {
-          id: "jj-example6",
-          name: "jj-Example 6",
-          iconName:'Document',
-          img:'/ExampleHtml/images/ImageryAdjustment.jpg',
-        }
-      ]
-    }
-  ]
-}
+          id: "ArcGisMap",
+          name: "ArcGisMap",
+          iconName: "Document",
+          img: "/ExampleHtml/images/baseLayer/ArcGisMap.png",
+        },
+      ],
+    },
+    {
+      id: "base",
+      name: "基础",
+      iconName: "ChatLineSquare",
+      children: [
+        {
+          id: "point",
+          name: "点",
+          iconName: "Document",
+          img: "/ExampleHtml/images/base/point.png",
+        },
+        {
+          id: "polyline",
+          name: "线",
+          iconName: "Document",
+          img: "/ExampleHtml/images/base/polyline.png",
+        },
+        {
+          id: "polygon",
+          name: "面",
+          iconName: "Document",
+          img: "/ExampleHtml/images/base/polygon.png",
+        },
+        {
+          id: "pointAndPolylineAndPolygon",
+          name: "点、线、面",
+          iconName: "Document",
+          img: "/ExampleHtml/images/base/pointAndPolylineAndPolygon.png",
+        },
+      ],
+    },
+  ],
+};
