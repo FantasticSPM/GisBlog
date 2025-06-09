@@ -62,7 +62,7 @@
       function addBaseLayer(type) {
         viewer.imageryLayers.addImageryProvider(
           new Cesium.WebMapTileServiceImageryProvider({
-            url: `http://t{s}.tianditu.com/${type}_w/wmts?tk=${webKey}`,
+            url: `https://t{s}.tianditu.gov.cn/${type}_w/wmts?tk=${webKey}`,
             service: "wmts",
             request: "GetTile",
             version: "1.0.0",
