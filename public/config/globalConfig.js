@@ -98,6 +98,24 @@ window.globalConfig = {
           img: "/ExampleHtml/images/base/polygon.png",
         },
         {
+          id: "circle",
+          name: "圆",
+          iconName: "Document",
+          img: "/ExampleHtml/images/base/circle.png",
+        },
+        {
+          id: "billboard",
+          name: "标牌billboard",
+          iconName: "Document",
+          img: "/ExampleHtml/images/base/billboard.png",
+        },
+        {
+          id: "label",
+          name: "标签label",
+          iconName: "Document",
+          img: "/ExampleHtml/images/base/label.png",
+        },
+        {
           id: "pointAndPolylineAndPolygon",
           name: "点、线、面",
           iconName: "Document",

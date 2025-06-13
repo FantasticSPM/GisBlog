@@ -1,7 +1,7 @@
 <template>
   <div class="pw-header">
     <div class="logo">
-      <img src="@/assets/logo.png" alt="">
+      <img src="/images/logo.png" alt="">
     </div>
     <n-menu
       class="pw-header-menu"
