@@ -36,5 +36,25 @@ function initViewer(id) {
   };
   const viewer = new Cesium.Viewer(id, viewerOptions);
   viewer.resolutionScale = window.devicePixelRatio || 1;
+  // 天地图Key
+  const webKey = "a76b9ea6e49fb0eecdb1ed34d1e75930";
+  viewer.imageryLayers.removeAll();
+  addBaseLayer("img");
+
+  function addBaseLayer(type) {
+    viewer.imageryLayers.addImageryProvider(
+      new Cesium.WebMapTileServiceImageryProvider({
+        url: `https://t{s}.tianditu.gov.cn/${type}_w/wmts?tk=${webKey}`,
+        service: "wmts",
+        request: "GetTile",
+        version: "1.0.0",
+        layer: type,
+        style: "default",
+        format: "tiles",
+        tileMatrixSetID: "w",
+        subdomains: [0, 1, 2, 3, 4, 5, 6, 7],
+      })
+    );
+  }
   return viewer;
 }
