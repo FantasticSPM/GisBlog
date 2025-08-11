@@ -91,7 +91,7 @@ async function loadHtml() {
   });
   const exampleId = route.query.exampleId;
   const moduleId = route.query.moduleId;
-  const path = `/ExampleHtml/${moduleId}/${exampleId}.html`;
+  const path = (import.meta.env.BASE_URL ==='/'?'':import.meta.env.BASE_URL)+`/ExampleHtml/${moduleId}/${exampleId}.html`;
   let res = await fetch(path).then((res) => res.text());
   iframe.value.src = path;
   iframe.value.onload = function () {

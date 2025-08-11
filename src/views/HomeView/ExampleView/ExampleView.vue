@@ -34,6 +34,15 @@ import ModuleComponent from './components/ModuleComponent.vue';
 
 const router = useRouter();
 const modules = window.globalConfig.exampleOptions
+modules.forEach(item => {
+  item.children.forEach(child => {
+    child.img =  (import.meta.env.BASE_URL ==='/'?'':import.meta.env.BASE_URL) + child.img
+  })
+});
+
+console.log(import.meta.url);
+console.log(modules);
+
 function goModule(module,id) {
   router.push({ name: 'ExampleView', query: { moduleId:module.id,exampleId: id } })
 }
