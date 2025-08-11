@@ -1,4 +1,4 @@
-import{r as k,a as V,f as s,l as m,j as t,k as p,g as r,n as P,t as D,w as I,s as d,v as M,x as h,p as a,q as c,F as T,y as L}from"./index-ZwS2wvyn.js";import{_ as E}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{B as v}from"./Button-lQpBHHqQ.js";import{_ as B,a as G}from"./Grid-EAojs7uG.js";import"./light-B596V6st.js";import"./flatten-HTZ3-lI9.js";const _={key:0,class:"article-view"},y=["src"],O={class:"article-view__top__info"},b={class:"article-view__top__title"},f={class:"article-view__list"},w=["src"],N=["title"],x={__name:"ArticleView",setup(U){const g=M(),l=k([{id:1,title:"“2.5万元就买了个摆设？”Vision Pro用户一年后集体后悔：吃灰、脖子疼、卖不掉!",img:new URL(""+new URL("img1-Bg51omlF.png",import.meta.url).href,import.meta.url).href,content:`整理 | 郑丽媛
+import{r as V,a as R,f as n,l as m,j as t,k as p,g as a,n as P,t as D,w as I,s as g,v as M,x as c,p as r,q as T,F as h,y as B}from"./index-BlhxvmOE.js";import{_ as G}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{B as E}from"./Button-C63kUOsG.js";import{_ as v,a as L}from"./Grid-i0UverCC.js";import"./light-CEuYF-7X.js";import"./flatten-EMhZcenT.js";const _={key:0,class:"article-view"},y=["src"],O={class:"article-view__top__info"},b={class:"article-view__top__title"},N={class:"article-view__list"},f=["src"],w=["title"],x={__name:"ArticleView",setup(F){const d=M(),l=V([{id:1,title:"“2.5万元就买了个摆设？”Vision Pro用户一年后集体后悔：吃灰、脖子疼、卖不掉!",img:new URL("/GisBlog/assets/img1-Bg51omlF.png",import.meta.url).href,content:`整理 | 郑丽媛
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -60,7 +60,7 @@ import{r as k,a as V,f as s,l as m,j as t,k as p,g as r,n as P,t as D,w as I,s a
 ————————————————
 
                             版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
-                        `},{id:2,title:"DeepSeek R1迎来小更新大升级，性能直逼OpenAI o3！",img:new URL(""+new URL("img2-CLMTDVvz.png",import.meta.url).href,import.meta.url).href,content:`整理 | 苏宓
+                        `},{id:2,title:"DeepSeek R1迎来小更新大升级，性能直逼OpenAI o3！",img:new URL("/GisBlog/assets/img2-CLMTDVvz.png",import.meta.url).href,content:`整理 | 苏宓
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -113,7 +113,7 @@ X 网友 Yuchen Jin 经过实测还发现，”我的氛围检查：它似乎是
 整体来看，DeepSeek 自 2023 年成立以来，一直在专注打造高性能的通用人工智能模型。像 DeepSeek v3 和 R1 这样的模型，在多个评测中都拿到了很不错的成绩。特别是 R1，它是开源的，采用 MIT 协议，大家可以免费使用、修改，甚至拿来做商业项目，这对于推动 AI 技术的普及和创新有很大帮助。
 
 那么你试用上最新的 R1 模型了吗？感觉怎么样？欢迎留言分享你的使用体验！
-`},{id:3,title:"字节内部禁用Cursor等第三方AI开发工具；荣耀确认进军机器人业务；iOS 18.5更新引发设备发热和耗电问题 | 极客头条",img:new URL(""+new URL("img3-C_2T_c0h.png",import.meta.url).href,import.meta.url).href,content:`整理 | 郑丽媛
+`},{id:3,title:"字节内部禁用Cursor等第三方AI开发工具；荣耀确认进军机器人业务；iOS 18.5更新引发设备发热和耗电问题 | 极客头条",img:new URL("/GisBlog/assets/img3-C_2T_c0h.png",import.meta.url).href,content:`整理 | 郑丽媛
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -220,7 +220,7 @@ LMeval基于LiteLLM框架构建，这一基础框架使得开发者能够通过�
 Mistral AI 发布 Codestral Embed
 
 Mistral AI 最近发布了 Codestral Embed，这是一个专为代码优化的嵌入模型，擅长处理现实世界中的代码数据检索，可通过灵活的维度调整和高效的分块策略，适合大规模代码库的 AI 驱动开发工作流。据悉，Codestral Embed 在代码检索任务中表现超越现有主流模型（如 Voyage Code 3、Cohere Embed v4.0 和 OpenAI 大型嵌入模型）。
-`},{id:4,title:"“2.5万元就买了个摆设？”Vision Pro用户一年后集体后悔：吃灰、脖子疼、卖不掉!",img:new URL(""+new URL("img1-Bg51omlF.png",import.meta.url).href,import.meta.url).href,content:`整理 | 郑丽媛
+`},{id:4,title:"“2.5万元就买了个摆设？”Vision Pro用户一年后集体后悔：吃灰、脖子疼、卖不掉!",img:new URL("/GisBlog/assets/img1-Bg51omlF.png",import.meta.url).href,content:`整理 | 郑丽媛
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -282,7 +282,7 @@ Mistral AI 最近发布了 Codestral Embed，这是一个专为代码优化的�
 ————————————————
 
                             版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
-                        `},{id:5,title:"DeepSeek R1迎来小更新大升级，性能直逼OpenAI o3！",img:new URL(""+new URL("img2-CLMTDVvz.png",import.meta.url).href,import.meta.url).href,content:`整理 | 苏宓
+                        `},{id:5,title:"DeepSeek R1迎来小更新大升级，性能直逼OpenAI o3！",img:new URL("/GisBlog/assets/img2-CLMTDVvz.png",import.meta.url).href,content:`整理 | 苏宓
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -335,7 +335,7 @@ X 网友 Yuchen Jin 经过实测还发现，”我的氛围检查：它似乎是
 整体来看，DeepSeek 自 2023 年成立以来，一直在专注打造高性能的通用人工智能模型。像 DeepSeek v3 和 R1 这样的模型，在多个评测中都拿到了很不错的成绩。特别是 R1，它是开源的，采用 MIT 协议，大家可以免费使用、修改，甚至拿来做商业项目，这对于推动 AI 技术的普及和创新有很大帮助。
 
 那么你试用上最新的 R1 模型了吗？感觉怎么样？欢迎留言分享你的使用体验！
-`},{id:6,title:"字节内部禁用Cursor等第三方AI开发工具；荣耀确认进军机器人业务；iOS 18.5更新引发设备发热和耗电问题 | 极客头条",img:new URL(""+new URL("img3-C_2T_c0h.png",import.meta.url).href,import.meta.url).href,content:`整理 | 郑丽媛
+`},{id:6,title:"字节内部禁用Cursor等第三方AI开发工具；荣耀确认进军机器人业务；iOS 18.5更新引发设备发热和耗电问题 | 极客头条",img:new URL("/GisBlog/assets/img3-C_2T_c0h.png",import.meta.url).href,content:`整理 | 郑丽媛
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -442,7 +442,7 @@ LMeval基于LiteLLM框架构建，这一基础框架使得开发者能够通过�
 Mistral AI 发布 Codestral Embed
 
 Mistral AI 最近发布了 Codestral Embed，这是一个专为代码优化的嵌入模型，擅长处理现实世界中的代码数据检索，可通过灵活的维度调整和高效的分块策略，适合大规模代码库的 AI 驱动开发工作流。据悉，Codestral Embed 在代码检索任务中表现超越现有主流模型（如 Voyage Code 3、Cohere Embed v4.0 和 OpenAI 大型嵌入模型）。
-`},{id:7,title:"“2.5万元就买了个摆设？”Vision Pro用户一年后集体后悔：吃灰、脖子疼、卖不掉!",img:new URL(""+new URL("img1-Bg51omlF.png",import.meta.url).href,import.meta.url).href,content:`整理 | 郑丽媛
+`},{id:7,title:"“2.5万元就买了个摆设？”Vision Pro用户一年后集体后悔：吃灰、脖子疼、卖不掉!",img:new URL("/GisBlog/assets/img1-Bg51omlF.png",import.meta.url).href,content:`整理 | 郑丽媛
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -504,7 +504,7 @@ Mistral AI 最近发布了 Codestral Embed，这是一个专为代码优化的�
 ————————————————
 
                             版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
-                        `},{id:8,title:"DeepSeek R1迎来小更新大升级，性能直逼OpenAI o3！",img:new URL(""+new URL("img2-CLMTDVvz.png",import.meta.url).href,import.meta.url).href,content:`整理 | 苏宓
+                        `},{id:8,title:"DeepSeek R1迎来小更新大升级，性能直逼OpenAI o3！",img:new URL("/GisBlog/assets/img2-CLMTDVvz.png",import.meta.url).href,content:`整理 | 苏宓
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -557,7 +557,7 @@ X 网友 Yuchen Jin 经过实测还发现，”我的氛围检查：它似乎是
 整体来看，DeepSeek 自 2023 年成立以来，一直在专注打造高性能的通用人工智能模型。像 DeepSeek v3 和 R1 这样的模型，在多个评测中都拿到了很不错的成绩。特别是 R1，它是开源的，采用 MIT 协议，大家可以免费使用、修改，甚至拿来做商业项目，这对于推动 AI 技术的普及和创新有很大帮助。
 
 那么你试用上最新的 R1 模型了吗？感觉怎么样？欢迎留言分享你的使用体验！
-`},{id:9,title:"字节内部禁用Cursor等第三方AI开发工具；荣耀确认进军机器人业务；iOS 18.5更新引发设备发热和耗电问题 | 极客头条",img:new URL(""+new URL("img3-C_2T_c0h.png",import.meta.url).href,import.meta.url).href,content:`整理 | 郑丽媛
+`},{id:9,title:"字节内部禁用Cursor等第三方AI开发工具；荣耀确认进军机器人业务；iOS 18.5更新引发设备发热和耗电问题 | 极客头条",img:new URL("/GisBlog/assets/img3-C_2T_c0h.png",import.meta.url).href,content:`整理 | 郑丽媛
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -664,7 +664,7 @@ LMeval基于LiteLLM框架构建，这一基础框架使得开发者能够通过�
 Mistral AI 发布 Codestral Embed
 
 Mistral AI 最近发布了 Codestral Embed，这是一个专为代码优化的嵌入模型，擅长处理现实世界中的代码数据检索，可通过灵活的维度调整和高效的分块策略，适合大规模代码库的 AI 驱动开发工作流。据悉，Codestral Embed 在代码检索任务中表现超越现有主流模型（如 Voyage Code 3、Cohere Embed v4.0 和 OpenAI 大型嵌入模型）。
-`},{id:10,title:"“2.5万元就买了个摆设？”Vision Pro用户一年后集体后悔：吃灰、脖子疼、卖不掉!",img:new URL(""+new URL("img1-Bg51omlF.png",import.meta.url).href,import.meta.url).href,content:`整理 | 郑丽媛
+`},{id:10,title:"“2.5万元就买了个摆设？”Vision Pro用户一年后集体后悔：吃灰、脖子疼、卖不掉!",img:new URL("/GisBlog/assets/img1-Bg51omlF.png",import.meta.url).href,content:`整理 | 郑丽媛
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -726,7 +726,7 @@ Mistral AI 最近发布了 Codestral Embed，这是一个专为代码优化的�
 ————————————————
 
                             版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
-                        `},{id:11,title:"DeepSeek R1迎来小更新大升级，性能直逼OpenAI o3！",img:new URL(""+new URL("img2-CLMTDVvz.png",import.meta.url).href,import.meta.url).href,content:`整理 | 苏宓
+                        `},{id:11,title:"DeepSeek R1迎来小更新大升级，性能直逼OpenAI o3！",img:new URL("/GisBlog/assets/img2-CLMTDVvz.png",import.meta.url).href,content:`整理 | 苏宓
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -779,7 +779,7 @@ X 网友 Yuchen Jin 经过实测还发现，”我的氛围检查：它似乎是
 整体来看，DeepSeek 自 2023 年成立以来，一直在专注打造高性能的通用人工智能模型。像 DeepSeek v3 和 R1 这样的模型，在多个评测中都拿到了很不错的成绩。特别是 R1，它是开源的，采用 MIT 协议，大家可以免费使用、修改，甚至拿来做商业项目，这对于推动 AI 技术的普及和创新有很大帮助。
 
 那么你试用上最新的 R1 模型了吗？感觉怎么样？欢迎留言分享你的使用体验！
-`},{id:12,title:"字节内部禁用Cursor等第三方AI开发工具；荣耀确认进军机器人业务；iOS 18.5更新引发设备发热和耗电问题 | 极客头条",img:new URL(""+new URL("img3-C_2T_c0h.png",import.meta.url).href,import.meta.url).href,content:`整理 | 郑丽媛
+`},{id:12,title:"字节内部禁用Cursor等第三方AI开发工具；荣耀确认进军机器人业务；iOS 18.5更新引发设备发热和耗电问题 | 极客头条",img:new URL("/GisBlog/assets/img3-C_2T_c0h.png",import.meta.url).href,content:`整理 | 郑丽媛
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -886,7 +886,7 @@ LMeval基于LiteLLM框架构建，这一基础框架使得开发者能够通过�
 Mistral AI 发布 Codestral Embed
 
 Mistral AI 最近发布了 Codestral Embed，这是一个专为代码优化的嵌入模型，擅长处理现实世界中的代码数据检索，可通过灵活的维度调整和高效的分块策略，适合大规模代码库的 AI 驱动开发工作流。据悉，Codestral Embed 在代码检索任务中表现超越现有主流模型（如 Voyage Code 3、Cohere Embed v4.0 和 OpenAI 大型嵌入模型）。
-`},{id:13,title:"“2.5万元就买了个摆设？”Vision Pro用户一年后集体后悔：吃灰、脖子疼、卖不掉!",img:new URL(""+new URL("img1-Bg51omlF.png",import.meta.url).href,import.meta.url).href,content:`整理 | 郑丽媛
+`},{id:13,title:"“2.5万元就买了个摆设？”Vision Pro用户一年后集体后悔：吃灰、脖子疼、卖不掉!",img:new URL("/GisBlog/assets/img1-Bg51omlF.png",import.meta.url).href,content:`整理 | 郑丽媛
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -948,7 +948,7 @@ Mistral AI 最近发布了 Codestral Embed，这是一个专为代码优化的�
 ————————————————
 
                             版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
-                        `},{id:14,title:"DeepSeek R1迎来小更新大升级，性能直逼OpenAI o3！",img:new URL(""+new URL("img2-CLMTDVvz.png",import.meta.url).href,import.meta.url).href,content:`整理 | 苏宓
+                        `},{id:14,title:"DeepSeek R1迎来小更新大升级，性能直逼OpenAI o3！",img:new URL("/GisBlog/assets/img2-CLMTDVvz.png",import.meta.url).href,content:`整理 | 苏宓
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -1001,7 +1001,7 @@ X 网友 Yuchen Jin 经过实测还发现，”我的氛围检查：它似乎是
 整体来看，DeepSeek 自 2023 年成立以来，一直在专注打造高性能的通用人工智能模型。像 DeepSeek v3 和 R1 这样的模型，在多个评测中都拿到了很不错的成绩。特别是 R1，它是开源的，采用 MIT 协议，大家可以免费使用、修改，甚至拿来做商业项目，这对于推动 AI 技术的普及和创新有很大帮助。
 
 那么你试用上最新的 R1 模型了吗？感觉怎么样？欢迎留言分享你的使用体验！
-`},{id:15,title:"字节内部禁用Cursor等第三方AI开发工具；荣耀确认进军机器人业务；iOS 18.5更新引发设备发热和耗电问题 | 极客头条",img:new URL(""+new URL("img3-C_2T_c0h.png",import.meta.url).href,import.meta.url).href,content:`整理 | 郑丽媛
+`},{id:15,title:"字节内部禁用Cursor等第三方AI开发工具；荣耀确认进军机器人业务；iOS 18.5更新引发设备发热和耗电问题 | 极客头条",img:new URL("/GisBlog/assets/img3-C_2T_c0h.png",import.meta.url).href,content:`整理 | 郑丽媛
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -1108,7 +1108,7 @@ LMeval基于LiteLLM框架构建，这一基础框架使得开发者能够通过�
 Mistral AI 发布 Codestral Embed
 
 Mistral AI 最近发布了 Codestral Embed，这是一个专为代码优化的嵌入模型，擅长处理现实世界中的代码数据检索，可通过灵活的维度调整和高效的分块策略，适合大规模代码库的 AI 驱动开发工作流。据悉，Codestral Embed 在代码检索任务中表现超越现有主流模型（如 Voyage Code 3、Cohere Embed v4.0 和 OpenAI 大型嵌入模型）。
-`},{id:16,title:"“2.5万元就买了个摆设？”Vision Pro用户一年后集体后悔：吃灰、脖子疼、卖不掉!",img:new URL(""+new URL("img1-Bg51omlF.png",import.meta.url).href,import.meta.url).href,content:`整理 | 郑丽媛
+`},{id:16,title:"“2.5万元就买了个摆设？”Vision Pro用户一年后集体后悔：吃灰、脖子疼、卖不掉!",img:new URL("/GisBlog/assets/img1-Bg51omlF.png",import.meta.url).href,content:`整理 | 郑丽媛
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -1170,7 +1170,7 @@ Mistral AI 最近发布了 Codestral Embed，这是一个专为代码优化的�
 ————————————————
 
                             版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
-                        `},{id:17,title:"DeepSeek R1迎来小更新大升级，性能直逼OpenAI o3！",img:new URL(""+new URL("img2-CLMTDVvz.png",import.meta.url).href,import.meta.url).href,content:`整理 | 苏宓
+                        `},{id:17,title:"DeepSeek R1迎来小更新大升级，性能直逼OpenAI o3！",img:new URL("/GisBlog/assets/img2-CLMTDVvz.png",import.meta.url).href,content:`整理 | 苏宓
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -1223,7 +1223,7 @@ X 网友 Yuchen Jin 经过实测还发现，”我的氛围检查：它似乎是
 整体来看，DeepSeek 自 2023 年成立以来，一直在专注打造高性能的通用人工智能模型。像 DeepSeek v3 和 R1 这样的模型，在多个评测中都拿到了很不错的成绩。特别是 R1，它是开源的，采用 MIT 协议，大家可以免费使用、修改，甚至拿来做商业项目，这对于推动 AI 技术的普及和创新有很大帮助。
 
 那么你试用上最新的 R1 模型了吗？感觉怎么样？欢迎留言分享你的使用体验！
-`},{id:18,title:"字节内部禁用Cursor等第三方AI开发工具；荣耀确认进军机器人业务；iOS 18.5更新引发设备发热和耗电问题 | 极客头条",img:new URL(""+new URL("img3-C_2T_c0h.png",import.meta.url).href,import.meta.url).href,content:`整理 | 郑丽媛
+`},{id:18,title:"字节内部禁用Cursor等第三方AI开发工具；荣耀确认进军机器人业务；iOS 18.5更新引发设备发热和耗电问题 | 极客头条",img:new URL("/GisBlog/assets/img3-C_2T_c0h.png",import.meta.url).href,content:`整理 | 郑丽媛
 
 出品 | CSDN（ID：CSDNnews）
 
@@ -1330,4 +1330,4 @@ LMeval基于LiteLLM框架构建，这一基础框架使得开发者能够通过�
 Mistral AI 发布 Codestral Embed
 
 Mistral AI 最近发布了 Codestral Embed，这是一个专为代码优化的嵌入模型，擅长处理现实世界中的代码数据检索，可通过灵活的维度调整和高效的分块策略，适合大规模代码库的 AI 驱动开发工作流。据悉，Codestral Embed 在代码检索任务中表现超越现有主流模型（如 Voyage Code 3、Cohere Embed v4.0 和 OpenAI 大型嵌入模型）。
-`},{id:50,title:"国内要闻",url:"https://blog.csdn.net/csdngeeknews/article/details/148308955?spm=1000.2115.3001.5926"}]),n=V(()=>l.value.length?l.value[0]:{});function A(o){if(!o.id)return;let e;o.url?e={url:o.url}:e={id:o.id},g.push({path:"/article/detail",query:e})}return(o,e)=>{const S=v,C=G,u=B,R=h("RouterView");return Object.keys(o.$route.query).length?(a(),m(R,{key:1})):(a(),s("div",_,[t("div",{class:d(["article-view__top",{"article-view__item_no-img":!r(n).img}])},[r(n).img?(a(),s("img",{key:0,src:r(n).img},null,8,y)):p("",!0),t("div",O,[t("h3",b,D(r(n).title),1),P(S,{class:"article-view__top__btn",type:"primary",size:"large",onClick:e[0]||(e[0]=i=>A(r(n)))},{default:I(()=>e[1]||(e[1]=[c("查看详情",-1)])),_:1,__:[1]})])],2),t("div",f,[e[2]||(e[2]=t("h2",{class:"article-view__list__title"},"近期文章",-1)),P(u,{class:"article-view__list__items",cols:"0 400:1 400:3 800:4","x-gap":10,"y-gap":10},{default:I(()=>[(a(!0),s(T,null,L(r(l),i=>(a(),m(C,{class:d(["article-view__item",{"article-view__item_no-img":!i.img}]),onClick:F=>A(i),key:i.id},{default:I(()=>[i.img?(a(),s("img",{key:0,src:i.img,alt:""},null,8,w)):p("",!0),t("h3",{class:"article-view__item__title",title:i.title},D(i.title),9,N)]),_:2},1032,["onClick","class"]))),128))]),_:1})])]))}}},J=E(x,[["__scopeId","data-v-9ed6aef4"]]);export{J as default};
+`},{id:50,title:"国内要闻",url:"https://blog.csdn.net/csdngeeknews/article/details/148308955?spm=1000.2115.3001.5926"}]),s=R(()=>l.value.length?l.value[0]:{});function A(o){if(!o.id)return;let e;o.url?e={url:o.url}:e={id:o.id},d.push({path:"/article/detail",query:e})}return(o,e)=>{const S=E,C=L,u=v,k=c("RouterView");return Object.keys(o.$route.query).length?(r(),m(k,{key:1})):(r(),n("div",_,[t("div",{class:g(["article-view__top",{"article-view__item_no-img":!a(s).img}])},[a(s).img?(r(),n("img",{key:0,src:a(s).img},null,8,y)):p("",!0),t("div",O,[t("h3",b,D(a(s).title),1),P(S,{class:"article-view__top__btn",type:"primary",size:"large",onClick:e[0]||(e[0]=i=>A(a(s)))},{default:I(()=>e[1]||(e[1]=[T("查看详情",-1)])),_:1,__:[1]})])],2),t("div",N,[e[2]||(e[2]=t("h2",{class:"article-view__list__title"},"近期文章",-1)),P(u,{class:"article-view__list__items",cols:"0 400:1 400:3 800:4","x-gap":10,"y-gap":10},{default:I(()=>[(r(!0),n(h,null,B(a(l),i=>(r(),m(C,{class:g(["article-view__item",{"article-view__item_no-img":!i.img}]),onClick:U=>A(i),key:i.id},{default:I(()=>[i.img?(r(),n("img",{key:0,src:i.img,alt:""},null,8,f)):p("",!0),t("h3",{class:"article-view__item__title",title:i.title},D(i.title),9,w)]),_:2},1032,["onClick","class"]))),128))]),_:1})])]))}}},J=G(x,[["__scopeId","data-v-9ed6aef4"]]);export{J as default};

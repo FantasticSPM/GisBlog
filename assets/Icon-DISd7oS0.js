@@ -1,4 +1,4 @@
-import{c as i,b as n,m as o}from"./light-B596V6st.js";import{d as s,h as a,B as t}from"./index-ZwS2wvyn.js";const r=i("base-icon",`
+import{c as i,b as n,m as o}from"./light-CEuYF-7X.js";import{d as s,h as a,B as t}from"./index-BlhxvmOE.js";const r=i("base-icon",`
  height: 1em;
  width: 1em;
  line-height: 1em;
