@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="../../Cesium/Widgets/widgets.css" />
+    <script src="../../ExampleHtml/js/init.js"></script>
+    <title>MapBox底图</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        position: relative;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      #map {
+        width: 100%;
+        height: 100%;
+      }
+
+      #baseLayer_select {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <select id="baseLayer_select">
+      <option value="streets-v12">streets-v12</option>
+      <option value="outdoors-v12">outdoors-v12</option>
+      <option value="light-v11">light-v11</option>
+      <option value="dark-v11" selected>dark-v11</option>
+      <option value="satellite-v9">satellite-v9</option>
+      <option value="satellite-streets-v12">satellite-streets-v12</option>
+      <option value="navigation-day-v1">navigation-day-v1</option>
+      <option value="navigation-night-v1">navigation-night-v1</option>
+    </select>
+    <script>
+      const viewer = initViewer("map");
+      viewer.camera.setView({
+        destination: Cesium.Cartesian3.fromDegrees(116.39, 39.9, 1000000),
+        orientation: {
+          heading: Cesium.Math.toRadians(0),
+          pitch: Cesium.Math.toRadians(-90),
+          roll: 0.0,
+        },
+      });
+
+      viewer.imageryLayers.removeAll();
+
+      const mapboxAccessToken = 'pk.eyJ1IjoiZnRjc3BtIiwiYSI6ImNsbXFnYTVyaTAycWQybXA0d2R1ejNrMzkifQ.duQ5nLGkqLlVo6u-lhchfA';
+      // 添加mapbox自定义地图实例
+      addMapBoxLayer('dark-v11');
+
+      const select = document.getElementById("baseLayer_select");
+      select.addEventListener("change", function () {
+        viewer.imageryLayers.removeAll();
+        addMapBoxLayer(this.value)
+      });
+
+      function addMapBoxLayer(styleId) {
+        viewer.imageryLayers.addImageryProvider(new Cesium.MapboxStyleImageryProvider({
+          styleId: styleId,
+          accessToken: mapboxAccessToken,
+          scaleFactor:true
+        }));
+      }
+    </script>
+  </body>
+</html>

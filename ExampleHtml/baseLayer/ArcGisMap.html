@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="../../Cesium/Widgets/widgets.css" />
+    <script src="../../ExampleHtml/js/init.js"></script>
+    <title>ArcGisMap底图</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        position: relative;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      #map {
+        width: 100%;
+        height: 100%;
+      }
+
+      #baseLayer_select {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <select id="baseLayer_select">
+      <option value="World_Imagery" selected>World_Imagery</option>
+      <option value="World_Street_Map">World_Street_Map</option>
+      <option value="World_Physical_Map">World_Physical_Map</option>
+      <option value="World_Shaded_Relief">World_Shaded_Relief</option>
+      <option value="World_Terrain_Base">World_Terrain_Base</option>
+      <option value="World_Topo_Map">World_Topo_Map</option>
+      <option value="NatGeo_World_Map">NatGeo_World_Map</option>
+      <option value="USA_Topo_Maps">USA_Topo_Maps</option>
+    </select>
+    <script>
+      const viewer = initViewer("map");
+      viewer.camera.setView({
+        destination: Cesium.Cartesian3.fromDegrees(116.39, 39.9, 1000000),
+        orientation: {
+          heading: Cesium.Math.toRadians(0),
+          pitch: Cesium.Math.toRadians(-90),
+          roll: 0.0,
+        },
+      });
+
+      viewer.imageryLayers.removeAll();
+
+      addArcGisMapLayer("World_Imagery");
+
+      const select = document.getElementById("baseLayer_select");
+      select.addEventListener("change", function () {
+        viewer.imageryLayers.removeAll();
+        addArcGisMapLayer(this.value);
+      });
+
+      async function addArcGisMapLayer(type) {
+        const url = `https://services.arcgisonline.com/arcgis/rest/services/${type}/MapServer`;
+        viewer.imageryLayers.addImageryProvider(
+          await Cesium.ArcGisMapServerImageryProvider.fromUrl(url)
+        );
+      }
+    </script>
+  </body>
+</html>

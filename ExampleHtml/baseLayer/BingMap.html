@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="../../Cesium/Widgets/widgets.css" />
+    <script src="../../ExampleHtml/js/init.js"></script>
+    <title>BingMap底图</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        position: relative;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      #map {
+        width: 100%;
+        height: 100%;
+      }
+
+      #baseLayer_select {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <select id="baseLayer_select">
+      <option value="Aerial">Aerial</option>
+      <option value="AerialWithLabels">AerialWithLabels</option>
+      <option value="AerialWithLabelsOnDemand">AerialWithLabelsOnDemand</option>
+      <option value="CanvasDark" selected>CanvasDark</option>
+      <option value="CanvasGray">CanvasGray</option>
+      <option value="CanvasLight">CanvasLight</option>
+      <option value="CollinsBart">CollinsBart</option>
+      <option value="OrdnanceSurvey">OrdnanceSurvey</option>
+      <option value="Road">Road</option>
+      <option value="OrdnanceSurvey">RoadOnDemand</option>
+    </select>
+    <script>
+      const viewer = initViewer("map");
+      viewer.camera.setView({
+        destination: Cesium.Cartesian3.fromDegrees(116.39, 39.9, 1000000),
+        orientation: {
+          heading: Cesium.Math.toRadians(0),
+          pitch: Cesium.Math.toRadians(-90),
+          roll: 0.0,
+        },
+      });
+
+      viewer.imageryLayers.removeAll();
+
+      const bingMapKey =
+        "AkNh5OpOWgi_CnmMMlh1pCEv7OGqHKnsK4XU1mxPbUSVq21ncmnZm4kf-lBh2hxw";
+      addBingMap("CanvasDark");
+
+      const select = document.getElementById("baseLayer_select");
+      select.addEventListener("change", function () {
+        viewer.imageryLayers.removeAll();
+        addBingMap(this.value);
+      });
+
+      async function addBingMap(type) {
+        const bing = await Cesium.BingMapsImageryProvider.fromUrl(
+          "https://dev.virtualearth.net",
+          {
+            key: bingMapKey,
+            mapStyle: type,
+          }
+        );
+        viewer.imageryLayers.addImageryProvider(bing);
+      }
+    </script>
+  </body>
+</html>

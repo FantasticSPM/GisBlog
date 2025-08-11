@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="../../Cesium/Widgets/widgets.css" />
+    <script src="../../ExampleHtml/js/init.js"></script>
+    <title>标牌billboard</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      #map {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <script>
+      const viewer = initViewer("map");
+      viewer.camera.setView({
+        destination: Cesium.Cartesian3.fromDegrees(115.50731580886364, 39.13386753870255, 1000000),
+        orientation: {
+          heading: Cesium.Math.toRadians(0),
+          pitch: Cesium.Math.toRadians(-90),
+          roll: 0.0,
+        },
+      });
+
+      const pointCollection = viewer.scene.primitives.add(new Cesium.PointPrimitiveCollection({
+        scene:viewer.scene
+      }));
+
+      const billBoardCollection = viewer.scene.primitives.add(new Cesium.BillboardCollection({
+        scene:viewer.scene
+      }))
+      console.log(pointCollection);
+      
+      const pointNum = 100
+      setTimeout(()=>{
+        addPoint(billBoardCollection,pointNum,2)
+      },2000)
+      function addPoint(collection,pointNum,batchSize=10){
+        let currentIndex = 0
+        _addPoint()
+        function _addPoint(){    
+          if(currentIndex>= pointNum) return 
+          if(collection.isDestroyed()) return 
+          for(let i=0;i<batchSize;i++){        
+            const lat = Math.random() *(40 - 22) + 22
+            const lng = Math.random() *(120 - 70) + 70
+            const height = Math.random() * 100000
+            const position = Cesium.Cartesian3.fromDegrees(lng, lat, height);
+            collection.add({
+              sizeInMeters:true,
+              width:100000,
+              height:20000,
+              position: position,
+              image:'/public/images/logo.png',
+              // pixelSize: 10,
+              color: Cesium.Color.fromRandom(),
+              // clampToGround:true,
+              heightReference: Cesium.HeightReference.CLAMP_TO_GROUND,
+              // scaleByDistance:new Cesium.NearFarScalar(100000,1,200000,0.5),
+              // distanceDisplayCondition:new Cesium.DistanceDisplayCondition(0.0, 200000)
+            });
+            currentIndex++      
+            requestAnimationFrame(_addPoint)
+          }        
+        }
+      }
+
+      // setTimeout(()=>{
+      //   viewer.scene.primitives.remove(pointCollection)
+      //   pointCollection.removeAll()
+      //   pointCollection.destroy()
+      // },50)
+
+      const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+      const a = [];
+      handler.setInputAction((movement) => {
+        const cartesian = viewer.scene.pickPosition(movement.position);
+        const cartographic = Cesium.Cartographic.fromCartesian(cartesian);
+        const longitude = Cesium.Math.toDegrees(cartographic.longitude);
+        const latitude = Cesium.Math.toDegrees(cartographic.latitude);
+        a.push([longitude, latitude]);
+        const height = cartographic.height;
+        console.log(a);
+      }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+    </script>
+  </body>
+</html>
