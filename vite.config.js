@@ -1,53 +1,53 @@
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from "node:url";
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import vueDevTools from 'vite-plugin-vue-devtools'
-import AutoImport  from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
+import vueDevTools from "vite-plugin-vue-devtools";
+import AutoImport from "unplugin-auto-import/vite";
+import Components from "unplugin-vue-components/vite";
+import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
 
 // https://vite.dev/config/
 export default defineConfig({
-  server:{
-    host:true,
+  server: {
+    host: true,
   },
-  base:'/GisBlog',
+  base: process.env.NODE_ENV === "production" ? "/GisBlog" : "./",
   plugins: [
     vue(),
     vueJsx(),
     vueDevTools(),
     AutoImport({
-      imports:[
-        'vue', 
-        'vue-router', 
-        'pinia',
+      imports: [
+        "vue",
+        "vue-router",
+        "pinia",
         {
-          'naive-ui': [
-            'useDialog',
-            'useMessage',
-            'useNotification',
-            'useLoadingBar'
-          ]
-        }
-      ]
+          "naive-ui": [
+            "useDialog",
+            "useMessage",
+            "useNotification",
+            "useLoadingBar",
+          ],
+        },
+      ],
     }),
     Components({
-      resolvers: [NaiveUiResolver()]
-    })
+      resolvers: [NaiveUiResolver()],
+    }),
   ],
-  css:{
-    preprocessorOptions:{
-      scss:{
-        additionalData:`@use "@/assets/globalStyleVariables.scss" as *;`,
-        javascriptEnabled: true
-      }
-    }
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@/assets/globalStyleVariables.scss" as *;`,
+        javascriptEnabled: true,
+      },
+    },
   },
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-})
+});
