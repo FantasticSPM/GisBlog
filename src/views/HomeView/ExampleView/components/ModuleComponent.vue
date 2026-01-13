@@ -4,7 +4,7 @@
       class="editor"
       collapse-mode="width"
       :collapsed-width="0"
-      :width="400"
+      :width="500"
       show-trigger="arrow-circle"
       bordered
     >
@@ -20,13 +20,20 @@
           <n-button size="small" @click="resetHtml">重置</n-button>
         </div>
       </div>
-      <v-ace-editor
+      <MonacoEditor 
+        v-model="content" 
+        class="ace-editor" 
+        theme="vs-light" 
+        lang="html" 
+        :options="monacoOptions"
+      ></MonacoEditor>
+      <!-- <v-ace-editor
         v-model:value="content"
         lang="html"
         theme="chrome"
         :options="options"
         class="ace-editor"
-      />
+      /> -->
     </n-layout-sider>
     <n-layout-content class="preview">
       <iframe ref="iframe" frameborder="0" width="100%" height="100%"></iframe>
@@ -35,6 +42,7 @@
 </template>
 
 <script setup>
+import MonacoEditor from "./MonacoEditor.vue";
 import { ElLoading } from "element-plus";
 import { VAceEditor } from "vue3-ace-editor";
 import { addCompleter } from "ace-builds/src-noconflict/ext-language_tools";
@@ -60,6 +68,11 @@ const options = {
   showGutter: true,
   displayIndentGuides: true,
 };
+
+const monacoOptions = {
+  automaticLayout: true,
+  wordWrap: "on",
+}
 addCompleter({
   getCompletions: function (editor, session, pos, prefix, callback) {
     callback(null, [
